@@ -1,3 +1,8 @@
+html, body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
 /* Navbar */
 .navbar-default {
   background-color: #0B3954;
@@ -34,6 +39,18 @@
   height: 100%;
 }
 
+.navbar-default .navbar-nav>li>a.essnt-navbar-link {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.navbar-default .navbar-nav>li>a.essnt-navbar-link:hover {
+  color: white;
+}
+
+.navbar-default .navbar-nav>li>a.essnt-navbar-link::after {
+  height: 0;
+}
+
 /* HERO */
 .essnt-hero {
   background-image: linear-gradient(206deg, #13B5BF 0%, #087E8B 100%);
@@ -58,11 +75,34 @@
   margin-top: 30px;
 }
 
+.essnt-hero__btn {
+  color: white;
+  font-size: inherit;
+  border-radius: 0;
+  position: relative;
+  padding: 10px 35px;
+}
+
+.essnt-hero__btn::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 0.2s ease-in;
+  opacity: 0;
+  content: '';
+}
+
+.essnt-hero__btn:hover::before {
+  opacity: 1;
+}
+
 .essnt-hero__btn-primary {
   background-color: #FF5A5F;
   text-transform: uppercase;
   border: none;
-  padding: 10px 35px;
   margin-right: 15px;
 }
 
@@ -70,7 +110,6 @@
   background-color: transparent;
   text-transform: uppercase;
   border: none;
-  padding: 5px 30px;
 }
 
 
@@ -91,6 +130,7 @@
 /* ABOUT */
 .essnt-about {
   background-color: #AC4142;
+  background-image: linear-gradient(206deg, #FF5A5F 0%, #AC4142 100%);
   padding: 60px 0;
   color: white;
 }
@@ -99,9 +139,26 @@
   margin-top: 0;
 }
 
+.essnt-about__text {
+  font-size: 16px;
+}
+
+.essnt-about__media-container {
+  text-align: center;
+}
+
 .essnt-about__media {
   height: 266px;
   opacity: 0.6;
+}
+
+/* APPLICATIONS */
+.essnt-applications {
+  /*background-color: #0B3954;*/
+  background-image: linear-gradient(206deg, #13B5BF 0%, #087E8B 100%);
+  color: white;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 /* COMPANIES */
@@ -148,11 +205,12 @@
 
 .essnt-footer-link {
   display: block;
-  color: #aaa;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .essnt-footer-link:hover {
-  color: #BFD7EA;
+  color: white;
+  text-decoration: none;
 }
 
 .essnt-footer__mtg-logo-container {
