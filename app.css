@@ -12,16 +12,16 @@ html, body {
   margin-bottom: 0;
 }
 
-.navbar-default .navbar-nav>li>a {
+.navbar-default .navbar-nav > li > a {
   color: white;
   position: relative;
 }
 
-.navbar-default .navbar-nav>li>a:hover {
+.navbar-default .navbar-nav > li > a:hover {
   color: white;
 }
 
-.navbar-default .navbar-nav>li>a:hover::after {
+.navbar-default .navbar-nav > li > a:hover::after {
   content: '';
   position: absolute;
   background-color: white;
@@ -39,15 +39,15 @@ html, body {
   height: 100%;
 }
 
-.navbar-default .navbar-nav>li>a.essnt-navbar-link {
+.navbar-default .navbar-nav > li > a.essnt-navbar-link {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.navbar-default .navbar-nav>li>a.essnt-navbar-link:hover {
+.navbar-default .navbar-nav > li > a.essnt-navbar-link:hover {
   color: white;
 }
 
-.navbar-default .navbar-nav>li>a.essnt-navbar-link::after {
+.navbar-default .navbar-nav > li > a.essnt-navbar-link::after {
   height: 0;
 }
 
@@ -57,6 +57,21 @@ html, body {
   padding-top: 50px;
   padding-bottom: 50px;
   color: white;
+  position: relative;
+}
+
+.essnt-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('https://c1.staticflickr.com/4/3111/2715927838_884d6bf7f9_b.jpg');
+  background-size: cover;
+  mix-blend-mode: color-dodge;
+  opacity: 0.3;
+  background-position-y: 570px;
 }
 
 .essnt-hero__title {
@@ -111,7 +126,6 @@ html, body {
   text-transform: uppercase;
   border: none;
 }
-
 
 /* CORE */
 .essnt-core {
